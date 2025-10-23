@@ -1,243 +1,412 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Order • NEON SLICE</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
-  <link rel="stylesheet" href="css/style.css"/>
-</head>
-<body>
-  <div class="background-image" aria-hidden="true"></div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Order • NEON SLICE</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="background-image" aria-hidden="true"></div>
 
-  <header class="sticky-top">
-    <nav class="navbar navbar-expand-lg navbar-dark glassy">
-      <div class="container">
-        <a class="navbar-brand fw-bold neon-text" href="./index.html">NEON<span class="accent">SLICE</span></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"
-                aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon" aria-hidden="true"></span>
-        </button>
+    <header class="sticky-top">
+      <nav class="navbar navbar-expand-lg navbar-dark glassy">
+        <div class="container">
+          <a class="navbar-brand fw-bold neon-text" href="./index.html">
+            NEON
+            <span class="accent">SLICE</span>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#nav"
+            aria-controls="nav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon" aria-hidden="true"></span>
+          </button>
 
-        <div id="nav" class="collapse navbar-collapse">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="./index.html#hero">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="./menu.html">Menu</a></li>
-            <li class="nav-item"><a class="nav-link active" aria-current="page" href="./order.html">Order</a></li>
-          </ul>
+          <div id="nav" class="collapse navbar-collapse">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a class="nav-link" href="./index.html#hero">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="./menu.html">Menu</a></li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="./order.html">Order</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./cart.html">
+                  Cart
+                  <span id="cart-item-count" class="badge rounded-pill bg-danger">0</span>
+                </a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="./index.html#about">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="./index.html#contact">Contact</a></li>
+              <li class="nav-item"><a class="nav-link" href="./registration.html">Join Us</a></li>
+              <li class="nav-item">
+                <a class="nav-link" href="./profile.html">
+                  <img src="Images/neonProfile.png" alt="Profile" class="navbar-avatar" />
+                </a>
+              </li>
+              <li class="nav-item d-flex align-items-center ms-3">
+                <button id="darkModeToggle" class="theme-toggle-button">Light Mode</button>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
-  </header>
+      </nav>
+    </header>
 
-  <main class="py-5">
-    <section class="container" aria-labelledby="orderTitle">
-      <header class="text-center mb-4">
-        <h1 id="orderTitle" class="neon-text">Order Your Pizza</h1>
-        <p class="text-secondary-emphasis">Pickup or delivery—your call.</p>
-      </header>
+    <main class="py-5">
+      <section class="container" aria-labelledby="orderTitle">
+        <header class="text-center mb-4">
+          <h1 id="orderTitle" class="neon-text">Order Your Pizza</h1>
+          <p class="text-secondary-emphasis">Pickup or delivery—your call.</p>
+        </header>
 
-      <form class="glassy p-4 rounded-4 neon-border mx-auto" style="max-width: 820px"
-            action="https://formspree.io/f/your-form-id" method="POST" novalidate>
-        <fieldset class="row g-3">
-          <legend class="visually-hidden">Customer Info</legend>
-          <div class="col-12 col-md-6">
-            <label for="name" class="form-label">Full Name</label>
-            <input id="name" name="name" type="text" class="form-control" required />
-          </div>
-          <div class="col-12 col-md-6">
-            <label for="email" class="form-label">Email</label>
-            <input id="email" name="email" type="email" class="form-control" required />
-          </div>
-          <div class="col-12 col-md-6">
-            <label for="phone" class="form-label">Phone</label>
-            <input id="phone" name="phone" type="tel" class="form-control" placeholder="555-123-4567" required />
-          </div>
-          <div class="col-12 col-md-6">
-            <label for="method" class="form-label">Method</label>
-            <select id="method" name="method" class="form-select" required>
-              <option value="">Choose…</option>
-              <option value="pickup" data-fee="0">Pickup (Free)</option>
-              <option value="delivery" data-fee="3.5">Delivery (+$3.50)</option>
-            </select>
-
-          </div>
-        </fieldset>
-
-        <fieldset class="row g-3 mt-2">
-          <legend class="visually-hidden">Order Details</legend>
-          <div class="col-12 col-md-6">
-            <label for="size" class="form-label">Size</label>
-            <select id="size" name="size" class="form-select" required>
-              <option value="">Choose…</option>
-              <option value="sm" data-price="10">Small 10"</option>
-              <option value="md" data-price="12">Medium 12"</option>
-              <option value="lg" data-price="14">Large 14"</option>
-              <option value="xl" data-price="16">XL 16"</option>
-            </select>
-          </div>
-          <div class="col-12 col-md-6">
-            <label for="base" class="form-label">Base</label>
-            <select id="base" name="base" class="form-select" required>
-              <option value="">Choose…</option>
-              <option value="neapolitan" data-price="0">Neapolitan</option>
-              <option value="ny" data-price="1">NY-Style (+$1)</option>
-              <option value="gf" data-price="2">Gluten-Free (+$2)</option>
-            </select>
-          </div>
-
-          <div class="col-12">
-            <label class="form-label">Toppings</label>
-            <div class="row">
-              <div class="col-6 col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" id="topPep" name="toppings"
-              value="pepperoni" data-price="1.5">
-            <label class="form-check-label" for="topPep">Pepperoni (+$1.50)</label>
-            </div></div>
-
-              <div class="col-6 col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" id="topMsh" name="toppings"
-              value="mushrooms" data-price="1.5">
-            <label class="form-check-label" for="topMsh">Mushrooms (+$1.50)</label>
-            </div></div>
-
-              <div class="col-6 col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" id="topOn" name="toppings"
-              value="onions" data-price="1.5">
-            <label class="form-check-label" for="topOn">Onions (+$1.50)</label>
-            </div></div>
-            
-              <div class="col-6 col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" id="topOl" name="toppings"
-              value="olives" data-price="1.5">
-            <label class="form-check-label" for="topOl">Olives (+$1.50)</label>
-            </div></div>
+        <form
+          class="glassy p-4 rounded-4 neon-border mx-auto"
+          style="max-width: 840px"
+          action="https://formspree.io/f/xblznjgd"
+          method="POST"
+          novalidate
+        >
+          <fieldset class="row g-3">
+            <legend class="visually-hidden">Customer Info</legend>
+            <div class="col-12 col-md-6">
+              <label for="name" class="form-label">Full Name</label>
+              <input id="name" name="name" type="text" class="form-control" required />
             </div>
+            <div class="col-12 col-md-6">
+              <label for="email" class="form-label">Email</label>
+              <input id="email" name="email" type="email" class="form-control" required />
+            </div>
+            <div class="col-12 col-md-6">
+              <label for="phone" class="form-label">Phone</label>
+              <input
+                id="phone"
+                name="phone"
+                type="tel"
+                class="form-control"
+                placeholder="555-123-4567"
+                required
+              />
+            </div>
+            <div class="col-12 col-md-6">
+              <label for="method" class="form-label">Method</label>
+              <select id="method" name="method" class="form-select" required>
+                <option value="">Choose…</option>
+                <option value="pickup" data-fee="0">Pickup (Free)</option>
+                <option value="delivery" data-fee="3.5">Delivery (+$3.50)</option>
+              </select>
+            </div>
+          </fieldset>
+
+          <fieldset class="row g-3 mt-2">
+            <legend class="visually-hidden">Order Details</legend>
+            <div class="col-12 col-md-6">
+              <label for="size" class="form-label">Size</label>
+              <select id="size" name="size" class="form-select" required>
+                <option value="">Choose…</option>
+                <option value="sm" data-price="10">Small 10"</option>
+                <option value="md" data-price="12">Medium 12"</option>
+                <option value="lg" data-price="14">Large 14"</option>
+                <option value="xl" data-price="16">XL 16"</option>
+              </select>
+            </div>
+            <div class="col-12 col-md-6">
+              <label for="base" class="form-label">Base</label>
+              <select id="base" name="base" class="form-select" required>
+                <option value="">Choose…</option>
+                <option value="neapolitan" data-price="0">Hand-Tossed</option>
+                <option value="ny" data-price="1">New York Style (+$1)</option>
+                <option value="gf" data-price="2">Gluten-Free (+$2)</option>
+              </select>
+            </div>
+
+            <div class="col-12">
+              <label class="form-label">Extra Toppings</label>
+              <div class="row">
+                <div class="col-6 col-md-3">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="topPep"
+                      name="toppings"
+                      value="pepperoni"
+                      data-price="1.5"
+                    />
+                    <label class="form-check-label" for="topPep">Pineapple (+$1.50)</label>
+                  </div>
+                </div>
+
+                <div class="col-6 col-md-3">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="topMsh"
+                      name="toppings"
+                      value="mushrooms"
+                      data-price="1.5"
+                    />
+                    <label class="form-check-label" for="topMsh">Sausage (+$1.50)</label>
+                  </div>
+                </div>
+
+                <div class="col-6 col-md-3">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="topOn"
+                      name="toppings"
+                      value="onions"
+                      data-price="1.5"
+                    />
+                    <label class="form-check-label" for="topOn">Extra Cheese (+$1.50)</label>
+                  </div>
+                </div>
+
+                <div class="col-6 col-md-3">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="topOl"
+                      name="toppings"
+                      value="olives"
+                      data-price="1.5"
+                    />
+                    <label class="form-check-label" for="topOl">Green Chili (+$1.50)</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="notes" class="form-label">Notes</label>
+              <textarea
+                id="notes"
+                name="notes"
+                class="form-control"
+                rows="4"
+                placeholder="Extra crispy, light sauce, etc."
+              ></textarea>
+            </div>
+          </fieldset>
+
+          <fieldset class="row g-3 mt-2">
+            <legend class="visually-hidden">Delivery Address</legend>
+            <div class="col-12">
+              <label for="address" class="form-label">Address (if delivery)</label>
+              <input
+                id="address"
+                name="address"
+                type="text"
+                class="form-control"
+                placeholder="123 Neon Ave, Apt 4B"
+              />
+            </div>
+            <div class="col-12 col-md-6">
+              <label for="city" class="form-label">City</label>
+              <input id="city" name="city" type="text" class="form-control" />
+            </div>
+            <div class="col-6 col-md-3">
+              <label for="state" class="form-label">State</label>
+              <input id="state" name="state" type="text" class="form-control" />
+            </div>
+            <div class="col-6 col-md-3">
+              <label for="zip" class="form-label">ZIP</label>
+              <input id="zip" name="zip" type="text" class="form-control" />
+            </div>
+          </fieldset>
+
+          <div class="d-flex gap-3 mt-4">
+            <button type="submit" class="btn btn-neon">Place Order</button>
+            <a href="./menu.html" class="btn btn-outline-neon">Back to Menu</a>
           </div>
+        </form>
+      </section>
+    </main>
 
-          <div class="col-12">
-            <label for="notes" class="form-label">Notes</label>
-            <textarea id="notes" name="notes" class="form-control" rows="4" placeholder="Extra crispy, light sauce, etc."></textarea>
-          </div>
-        </fieldset>
+    <footer class="py-4 mt-auto">
+      <div
+        class="container d-flex flex-column flex-md-row justify-content-between align-items-center"
+      >
+        <p class="mb-2 mb-md-0 small text-secondary-emphasis">
+          <span id="year"></span>
+          NEONSLICE | All rights reserved. | Vine Webs ©
+        </p>
+        <a class="nav-link" href="./index.html#contact">Contact</a>
+      </div>
+    </footer>
 
-        <fieldset class="row g-3 mt-2">
-          <legend class="visually-hidden">Delivery Address</legend>
-          <div class="col-12">
-            <label for="address" class="form-label">Address (if delivery)</label>
-            <input id="address" name="address" type="text" class="form-control" placeholder="123 Neon Ave, Apt 4B" />
-          </div>
-          <div class="col-12 col-md-6">
-            <label for="city" class="form-label">City</label>
-            <input id="city" name="city" type="text" class="form-control" />
-          </div>
-          <div class="col-6 col-md-3">
-            <label for="state" class="form-label">State</label>
-            <input id="state" name="state" type="text" class="form-control" />
-          </div>
-          <div class="col-6 col-md-3">
-            <label for="zip" class="form-label">ZIP</label>
-            <input id="zip" name="zip" type="text" class="form-control" />
-          </div>
-        </fieldset>
-
-        <div class="d-flex gap-3 mt-4">
-          <button type="submit" class="btn btn-neon">Place Order</button>
-          <a href="./menu.html" class="btn btn-outline-neon">Back to Menu</a>
-        </div>
-      </form>
-    </section>
-  </main>
-
-  <footer class="py-4 mt-auto">
-    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
-      <p class="mb-2 mb-md-0 small text-secondary-emphasis">© <span id="year"></span> NEONSLICE</p>
-      <a class="nav-link small" href="./index.html#contact">Contact</a>
-    </div>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-          integrity="sha384-JPuhN2rH5A7oN9b0E9N3z0Qx2Eo7y4j1sYQ4m7Z0b7k5QKZ5vRzW1lqkQnQf3kC9"
-          crossorigin="anonymous"></script>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-  <script>
-  (function () {
-    // ----- Config -----
-    const TAX_RATE = 0.0775; // 7.75% (change to your local rate)
-
-    // ----- DOM refs -----
-    const form = document.querySelector('form');
-    const size = document.getElementById('size');
-    const base = document.getElementById('base');
-    const method = document.getElementById('method');
-    const toppingChecks = [...document.querySelectorAll('input[name="toppings"]')];
-
-    const elSizeBase = document.getElementById('sum-sizebase');
-    const elToppings  = document.getElementById('sum-toppings');
-    const elDelivery  = document.getElementById('sum-delivery');
-    const elTax       = document.getElementById('sum-tax');
-    const elTotal     = document.getElementById('sum-total');
-    const hiddenTotal = document.getElementById('calculatedTotal');
-
-    // ----- Helpers -----
-    const money = n => `$${n.toFixed(2)}`;
-
-    function readDataPrice(selectEl) {
-      const opt = selectEl.options[selectEl.selectedIndex];
-      return opt ? parseFloat(opt.dataset.price || opt.dataset.fee || 0) : 0;
-    }
-
-    function calc() {
-      // Size & Base
-      const sizePrice = readDataPrice(size);
-      const basePrice = readDataPrice(base);
-      const sizeBase  = sizePrice + basePrice;
-
-      // Toppings
-      const toppingsPrice = toppingChecks
-        .filter(ch => ch.checked)
-        .reduce((sum, ch) => sum + parseFloat(ch.dataset.price || 0), 0);
-
-      // Delivery fee
-      const deliveryFee = (() => {
-        const opt = method.options[method.selectedIndex];
-        return opt ? parseFloat(opt.dataset.fee || 0) : 0;
-      })();
-
-      // Subtotal
-      const subtotal = sizeBase + toppingsPrice + deliveryFee;
-
-      // Tax (apply to food + delivery; adjust if your policy differs)
-      const tax = subtotal * TAX_RATE;
-
-      // Total
-      const total = subtotal + tax;
-
-      // Render
-      elSizeBase.textContent = money(sizeBase);
-      elToppings.textContent = money(toppingsPrice);
-      elDelivery.textContent = money(deliveryFee);
-      elTax.textContent = money(tax);
-      elTotal.textContent = money(total);
-
-      hiddenTotal.value = total.toFixed(2);
-    }
-
-    // ----- Bind events -----
-    [size, base, method, ...toppingChecks].forEach(el => {
-      el.addEventListener('change', calc);
-      el.addEventListener('input', calc);
-    });
-
-    // Initial calc on load
-    calc();
-
-    // Optional: prevent submit if required priced fields empty
-    form.addEventListener('submit', (e) => {
-      if (!size.value || !base.value || !method.value) {
-        // Let browser validation handle it; this is just a safety check.
-        return;
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+    <script>
+      // Update cart item count on load
+      const cartItemCountElement = document.getElementById('cart-item-count');
+      if (cartItemCountElement) {
+        const itemCount = localStorage.getItem('cartItemCount');
+        if (itemCount && parseInt(itemCount) > 0) {
+          cartItemCountElement.textContent = itemCount;
+          cartItemCountElement.style.display = 'inline-block';
+        } else {
+          cartItemCountElement.style.display = 'none';
+        }
       }
-      // You can log or modify payload here if needed
-    });
-  })();
-</script>
-</body>
+    </script>
+    <script>
+      (function () {
+        // ----- Config -----
+        const TAX_RATE = 0.0775; // 7.75% (change to your local rate)
+
+        // ----- DOM refs -----
+        const form = document.querySelector('form');
+        const size = document.getElementById('size');
+        const base = document.getElementById('base');
+        const method = document.getElementById('method');
+        const toppingChecks = [...document.querySelectorAll('input[name="toppings"]')];
+
+        const elSizeBase = document.getElementById('sum-sizebase');
+        const elToppings = document.getElementById('sum-toppings');
+        const elDelivery = document.getElementById('sum-delivery');
+        const elTax = document.getElementById('sum-tax');
+        const elTotal = document.getElementById('sum-total');
+        const hiddenTotal = document.getElementById('calculatedTotal');
+
+        // ----- Helpers -----
+        const money = (n) => `$${n.toFixed(2)}`;
+
+        function readDataPrice(selectEl) {
+          const opt = selectEl.options[selectEl.selectedIndex];
+          return opt ? parseFloat(opt.dataset.price || opt.dataset.fee || 0) : 0;
+        }
+
+        function calc() {
+          // Size & Base
+          const sizePrice = readDataPrice(size);
+          const basePrice = readDataPrice(base);
+          const sizeBase = sizePrice + basePrice;
+
+          // Toppings
+          const toppingsPrice = toppingChecks
+            .filter((ch) => ch.checked)
+            .reduce((sum, ch) => sum + parseFloat(ch.dataset.price || 0), 0);
+
+          // Delivery fee
+          const deliveryFee = (() => {
+            const opt = method.options[method.selectedIndex];
+            return opt ? parseFloat(opt.dataset.fee || 0) : 0;
+          })();
+
+          // Subtotal
+          const subtotal = sizeBase + toppingsPrice + deliveryFee;
+
+          // Tax (apply to food + delivery; adjust if your policy differs)
+          const tax = subtotal * TAX_RATE;
+
+          // Total
+          const total = subtotal + tax;
+
+          // Render
+          elSizeBase.textContent = money(sizeBase);
+          elToppings.textContent = money(toppingsPrice);
+          elDelivery.textContent = money(deliveryFee);
+          elTax.textContent = money(tax);
+          elTotal.textContent = money(total);
+
+          hiddenTotal.value = total.toFixed(2);
+        }
+
+        // ----- Bind events -----
+        [size, base, method, ...toppingChecks].forEach((el) => {
+          el.addEventListener('change', calc);
+          el.addEventListener('input', calc);
+        });
+
+        // Initial calc on load
+        calc();
+
+        // Optional: prevent submit if required priced fields empty
+        form.addEventListener('submit', (e) => {
+          if (!size.value || !base.value || !method.value) {
+            // Let browser validation handle it; this is just a safety check.
+            return;
+          }
+
+          // Capture order details and store in localStorage
+          const orderDetails = {
+            name: form.elements.name.value,
+            email: form.elements.email.value,
+            phone: form.elements.phone.value,
+            method: form.elements.method.options[form.elements.method.selectedIndex].text,
+            address: form.elements.address.value,
+            city: form.elements.city.value,
+            state: form.elements.state.value,
+            zip: form.elements.zip.value,
+            size: size.options[size.selectedIndex].text,
+            base: base.options[base.selectedIndex].text,
+            toppings: toppingChecks
+              .filter((ch) => ch.checked)
+              .map((ch) => ch.labels[0].textContent.replace(/\s\(.*\)/, '')),
+            notes: form.elements.notes.value,
+            subtotal: (sizePrice + basePrice + toppingsPrice + deliveryFee).toFixed(2),
+            tax: tax.toFixed(2),
+            deliveryFee: deliveryFee.toFixed(2),
+            total: total.toFixed(2),
+          };
+          localStorage.setItem('neonSliceOrder', JSON.stringify(orderDetails));
+
+          // Calculate item count for cart icon
+          const itemCount = 1 + toppingChecks.filter((ch) => ch.checked).length; // 1 for the pizza itself + selected toppings
+          localStorage.setItem('cartItemCount', itemCount.toString());
+
+          // Redirect to cart.html
+          window.location.href = './cart.html';
+          e.preventDefault(); // Prevent default form submission to Formspree
+        });
+      })();
+    </script>
+    <script>
+      // Dark/Light Mode Toggle
+      const darkModeToggle = document.getElementById('darkModeToggle');
+      const enableLightMode = localStorage.getItem('lightMode') === 'true';
+
+      const updateTheme = (isLightMode) => {
+        if (isLightMode) {
+          document.body.classList.add('light-mode');
+          darkModeToggle.textContent = 'Dark Mode';
+          localStorage.setItem('lightMode', 'true');
+        } else {
+          document.body.classList.remove('light-mode');
+          darkModeToggle.textContent = 'Light Mode';
+          localStorage.setItem('lightMode', 'false');
+        }
+      };
+
+      // Initial theme setup
+      updateTheme(enableLightMode);
+
+      darkModeToggle.addEventListener('click', () => {
+        const isLightMode = document.body.classList.contains('light-mode');
+        updateTheme(!isLightMode);
+      });
+    </script>
+  </body>
 </html>

@@ -42,8 +42,22 @@
               <li class="nav-item"><a class="nav-link active" href="#hero">Home</a></li>
               <li class="nav-item"><a class="nav-link" href="./menu.html">Menu</a></li>
               <li class="nav-item"><a class="nav-link" href="./order.html">Order</a></li>
+              <li class="nav-item">
+                <a class="nav-link" href="./cart.html">
+                  Cart <span id="cart-item-count" class="badge rounded-pill bg-danger">0</span>
+                </a>
+              </li>
               <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
               <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+              <li class="nav-item"><a class="nav-link" href="./registration.html">Join Us</a></li>
+              <li class="nav-item">
+                <a class="nav-link" href="./profile.html">
+                  <img src="Images/neonProfile.png" alt="Profile" class="navbar-avatar">
+                </a>
+              </li>
+              <li class="nav-item d-flex align-items-center ms-3">
+                <button id="darkModeToggle" class="theme-toggle-button">Light Mode</button>
+              </li>
             </ul>
           </div>
         </div>
@@ -72,7 +86,7 @@
               <div class="hero-card p-4 rounded-4 glassy">
                 <figure class="ratio ratio-16x9 rounded-3 overflow-hidden neon-border mb-3">
                   <img
-                    src="./Images/pizza_hero.jpg"
+                    src="./Images/neonslice.png"
                     class="object-fit-cover"
                     alt="A cyberpunk-styled pizza glowing under neon lights."
                   />
@@ -89,21 +103,21 @@
                   <div class="carousel-inner">
                     <div class="carousel-item active">
                       <img
-                        src="./Images/pizza_margherita.jpg"
+                        src="./Images/greenReactor.png"
                         class="d-block w-100"
                         alt="Margherita pizza with basil"
                       />
                     </div>
                     <div class="carousel-item">
                       <img
-                        src="./Images/pizza_pepperoni.jpg"
+                        src="./Images/fantastic4.png"
                         class="d-block w-100"
                         alt="Pepperoni pizza with crispy edges"
                       />
                     </div>
                     <div class="carousel-item">
                       <img
-                        src="./Images/pizza_veggie.jpg"
+                        src="./Images/spicyNeonInferno.png"
                         class="d-block w-100"
                         alt="Veggie pizza with peppers and olives"
                       />
@@ -186,14 +200,14 @@
           <header class="text-center mb-4">
             <h2 class="h1 neon-text">Contact Us</h2>
             <p class="text-secondary-emphasis">
-              Questions, catering, or custom pies? Ping the kitchen.
+              Questions, catering, or custom pies? Ping the kitchen manager.
             </p>
           </header>
 
           <form
             class="mx-auto glassy p-4 rounded-4 neon-border"
             style="max-width: 720px"
-            action="https://formspree.io/f/your-form-id"
+            action="https://formspree.io/f/xblznjgd"
             method="POST"
             novalidate
           >
@@ -233,12 +247,10 @@
     <!-- Footer -->
     <footer class="py-4 mt-auto">
       <div
-        class="container d-flex flex-column flex-md-row justify-content-between align-items-center"
-      >
+        class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
         <p class="mb-2 mb-md-0 small text-secondary-emphasis">
-          ©
           <span id="year"></span>
-          NEONSLICE | All rights reserved.
+          NEONSLICE | All rights reserved. | Vine Webs ©
         </p>
         <nav aria-label="Footer">
           <ul class="nav">
@@ -253,11 +265,47 @@
     <!-- Bootstrap JS -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-JPuhN2rH5A7oN9b0E9N3z0Qx2Eo7y4j1sYQ4m7Z0b7k5QKZ5vRzW1lqkQnQf3kC9"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
     <script>
       document.getElementById('year').textContent = new Date().getFullYear();
+
+      // Update cart item count on load
+      const cartItemCountElement = document.getElementById('cart-item-count');
+      if (cartItemCountElement) {
+        const itemCount = localStorage.getItem('cartItemCount');
+        if (itemCount && parseInt(itemCount) > 0) {
+          cartItemCountElement.textContent = itemCount;
+          cartItemCountElement.style.display = 'inline-block';
+        } else {
+          cartItemCountElement.style.display = 'none';
+        }
+      }
+
+      // Dark/Light Mode Toggle
+      const darkModeToggle = document.getElementById('darkModeToggle');
+      const enableLightMode = localStorage.getItem('lightMode') === 'true';
+
+      const updateTheme = (isLightMode) => {
+        if (isLightMode) {
+          document.body.classList.add('light-mode');
+          darkModeToggle.textContent = 'Dark Mode';
+          localStorage.setItem('lightMode', 'true');
+        } else {
+          document.body.classList.remove('light-mode');
+          darkModeToggle.textContent = 'Light Mode';
+          localStorage.setItem('lightMode', 'false');
+        }
+      };
+
+      // Initial theme setup
+      updateTheme(enableLightMode);
+
+      darkModeToggle.addEventListener('click', () => {
+        const isLightMode = document.body.classList.contains('light-mode');
+        updateTheme(!isLightMode);
+      });
     </script>
   </body>
 </html>

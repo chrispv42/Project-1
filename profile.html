@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>User Profile • NEON SLICE</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+  <div class="background-image" aria-hidden="true"></div>
+
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark glassy">
+      <div class="container">
+        <a class="navbar-brand fw-bold neon-text" href="./index.html">NEON<span class="accent">SLICE</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"
+                aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon" aria-hidden="true"></span>
+        </button>
+
+        <div id="nav" class="collapse navbar-collapse">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="./index.html#hero">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="./menu.html">Menu</a></li>
+            <li class="nav-item"><a class="nav-link" href="./order.html">Order</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="./cart.html">
+                Cart <span id="cart-item-count" class="badge rounded-pill bg-danger">0</span>
+              </a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="./payments.html">Payments</a></li>
+            <li class="nav-item"><a class="nav-link" href="./index.html#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="./index.html#contact">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="./registration.html">Join Us</a></li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="./profile.html">
+                  <img src="Images/neonProfile.png" alt="Profile" class="navbar-avatar">
+                </a>
+              </li>
+              <li class="nav-item d-flex align-items-center ms-3">
+                <button id="darkModeToggle" class="theme-toggle-button">Light Mode</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+  <main class="py-5">
+    <section class="container" aria-labelledby="profileTitle">
+      <header class="text-center mb-4">
+        <h1 id="profileTitle" class="neon-text">User Profile</h1>
+        <p class="text-secondary-emphasis">Manage your account settings and preferences.</p>
+      </header>
+
+      <div class="row">
+        <aside class="col-12 col-md-3">
+          <nav class="glassy p-3 rounded-4 neon-border mb-4">
+            <h3 class="neon-text h5 mb-3">Account Navigation</h3>
+            <ul class="nav flex-column">
+              <li class="nav-item"><a class="nav-link active" href="#profileInfo">Profile Info</a></li>
+              <li class="nav-item"><a class="nav-link" href="#orderHistory">Order History</a></li>
+              <li class="nav-item"><a class="nav-link" href="#paymentMethods">Payment Methods</a></li>
+              <li class="nav-item"><a class="nav-link" href="#settings">Settings</a></li>
+              <li class="nav-item"><a class="nav-link text-danger" href="#">Logout</a></li>
+            </ul>
+          </nav>
+        </aside>
+
+        <article class="col-12 col-md-9">
+          <div class="glassy p-4 rounded-4 neon-border">
+            <h2 class="neon-text mb-3" id="profileInfo">Profile Information</h2>
+            <form>
+              <div class="mb-3">
+                <label for="userName" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="userName" value="John Doe" readonly>
+              </div>
+              <div class="mb-3">
+                <label for="userEmail" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="userEmail" value="john.doe@example.com" readonly>
+              </div>
+              <div class="mb-3">
+                <label for="userPhone" class="form-label">Phone Number</label>
+                <input type="tel" class="form-control" id="userPhone" value="555-123-4567" readonly>
+              </div>
+              <div class="mb-3">
+                <label for="userAddress" class="form-label">Address</label>
+                <input type="text" class="form-control" id="userAddress" value="123 Neon Ave, Apt 4B" readonly>
+              </div>
+              <button type="button" class="btn btn-neon">Edit Profile</button>
+            </form>
+
+            <h2 class="neon-text mt-5 mb-3" id="orderHistory">Order History</h2>
+            <p class="text-secondary-emphasis">No past orders found.</p>
+
+            <h2 class="neon-text mt-5 mb-3" id="paymentMethods">Payment Methods</h2>
+            <p class="text-secondary-emphasis">No payment methods on file.</p>
+
+            <h2 class="neon-text mt-5 mb-3" id="settings">Settings</h2>
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" id="darkModeSwitch" checked>
+              <label class="form-check-label" for="darkModeSwitch">Dark Mode</label>
+            </div>
+            <div class="form-check form-switch mt-2">
+              <input class="form-check-input" type="checkbox" id="emailNotifications">
+              <label class="form-check-label" for="emailNotifications">Email Notifications</label>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-4 mt-auto">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+      <p class="mb-2 mb-md-0 small text-secondary-emphasis"> <span id="year"></span> NEONSLICE | All rights reserved. | Vine Webs ©</p>
+      <a class="nav-link small" href="./index.html#contact">Contact</a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+          crossorigin="anonymous"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    // Update cart item count on load
+    const cartItemCountElement = document.getElementById('cart-item-count');
+    if (cartItemCountElement) {
+      const itemCount = localStorage.getItem('cartItemCount');
+      if (itemCount && parseInt(itemCount) > 0) {
+        cartItemCountElement.textContent = itemCount;
+        cartItemCountElement.style.display = 'inline-block';
+      } else {
+        cartItemCountElement.style.display = 'none';
+      }
+    }
+
+      // Dark/Light Mode Toggle
+      const darkModeToggle = document.getElementById('darkModeToggle');
+      const enableLightMode = localStorage.getItem('lightMode') === 'true';
+
+      const updateTheme = (isLightMode) => {
+        if (isLightMode) {
+          document.body.classList.add('light-mode');
+          darkModeToggle.textContent = 'Dark Mode';
+          localStorage.setItem('lightMode', 'true');
+        } else {
+          document.body.classList.remove('light-mode');
+          darkModeToggle.textContent = 'Light Mode';
+          localStorage.setItem('lightMode', 'false');
+        }
+      };
+
+      // Initial theme setup
+      updateTheme(enableLightMode);
+
+      darkModeToggle.addEventListener('click', () => {
+        const isLightMode = document.body.classList.contains('light-mode');
+        updateTheme(!isLightMode);
+      });
+    </script>
+  </body>
+</html>

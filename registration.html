@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Profile • NEON SLICE</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="background-image" aria-hidden="true"></div>
+
+    <header class="sticky-top">
+      <nav class="navbar navbar-expand-lg navbar-dark glassy">
+        <div class="container">
+          <a class="navbar-brand fw-bold neon-text" href="./index.html">
+            NEON
+            <span class="accent">SLICE</span>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#nav"
+            aria-controls="nav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon" aria-hidden="true"></span>
+          </button>
+
+          <div id="nav" class="collapse navbar-collapse">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a class="nav-link" href="./index.html#hero">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="./menu.html">Menu</a></li>
+              <li class="nav-item"><a class="nav-link" href="./order.html">Order</a></li>
+              <li class="nav-item">
+                <a class="nav-link" href="./cart.html">
+                  Cart
+                  <span id="cart-item-count" class="badge rounded-pill bg-danger">0</span>
+                </a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="./index.html#about">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="./index.html#contact">Contact</a></li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="./registration.html">
+                  Join Us
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./profile.html">
+                  <img src="Images/neonProfile.png" alt="Profile" class="navbar-avatar" />
+                </a>
+              </li>
+              <li class="nav-item d-flex align-items-center ms-3">
+                <button id="darkModeToggle" class="theme-toggle-button">Light Mode</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="py-5">
+      <section class="container" aria-labelledby="profileTitle">
+        <header class="text-center mb-4">
+          <h1 id="profileTitle" class="neon-text">Join the NeonSlice Crew!</h1>
+          <p class="text-secondary-emphasis">
+            Create your profile to save your favorite orders and get exclusive deals.
+          </p>
+        </header>
+        <section class="container my-4" aria-label="NeonSlice Theme">
+          <div class="mx-auto" style="max-width: 540px">
+            <div class="glassy neon-border rounded-4 p-3">
+              <h2 class="h6 neon-text mb-2">Vibe While You Join</h2>
+              <iframe
+                style="border-radius: 12px"
+                src="https://open.spotify.com/embed/track/4XKEVz0X1BIDhCAfb782tm?utm_source=generator"
+                width="100%"
+                height="152"
+                frameborder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+              ></iframe>
+              <p class="small text-secondary-emphasis mb-0">Tap ▶ to play.</p>
+            </div>
+          </div>
+        </section>
+
+        <div class="glassy p-4 rounded-4 neon-border mx-auto" style="max-width: 600px">
+          <form>
+            <div class="mb-3">
+              <label for="profileName" class="form-label">Full Name</label>
+              <input type="text" class="form-control" id="profileName" required />
+            </div>
+            <div class="mb-3">
+              <label for="profileEmail" class="form-label">Email address</label>
+              <input
+                type="email"
+                class="form-control"
+                id="profileEmail"
+                aria-describedby="emailHelp"
+                required
+              />
+              <div id="emailHelp" class="form-text text-secondary-emphasis">
+                We'll never share your email with anyone else.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="profilePassword" class="form-label">Password</label>
+              <input type="password" class="form-control" id="profilePassword" required />
+            </div>
+            <div class="mb-3">
+              <label for="profilePhone" class="form-label">Phone Number</label>
+              <input type="tel" class="form-control" id="profilePhone" placeholder="555-123-4567" />
+            </div>
+            <div class="mb-3">
+              <label for="profileAddress" class="form-label">Address</label>
+              <input
+                type="text"
+                class="form-control"
+                id="profileAddress"
+                placeholder="123 Neon Ave, Apt 4B"
+              />
+            </div>
+            <div class="d-flex gap-3 mt-4">
+              <button type="submit" class="btn btn-neon">Create Profile</button>
+              <button type="reset" class="btn btn-outline-neon">Reset</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="py-4 mt-auto">
+      <div
+        class="container d-flex flex-column flex-md-row justify-content-between align-items-center"
+      >
+        <p class="mb-2 mb-md-0 small text-secondary-emphasis">
+          <span id="year"></span>
+          NEONSLICE | All rights reserved. | Vine Webs ©
+        </p>
+        <a class="nav-link small" href="./index.html#contact">Contact</a>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      // Update cart item count on load
+      const cartItemCountElement = document.getElementById('cart-item-count');
+      if (cartItemCountElement) {
+        const itemCount = localStorage.getItem('cartItemCount');
+        if (itemCount && parseInt(itemCount) > 0) {
+          cartItemCountElement.textContent = itemCount;
+          cartItemCountElement.style.display = 'inline-block';
+        } else {
+          cartItemCountElement.style.display = 'none';
+        }
+      }
+
+      // Dark/Light Mode Toggle
+      const darkModeToggle = document.getElementById('darkModeToggle');
+      const enableLightMode = localStorage.getItem('lightMode') === 'true';
+
+      const updateTheme = (isLightMode) => {
+        if (isLightMode) {
+          document.body.classList.add('light-mode');
+          darkModeToggle.textContent = 'Dark Mode';
+          localStorage.setItem('lightMode', 'true');
+        } else {
+          document.body.classList.remove('light-mode');
+          darkModeToggle.textContent = 'Light Mode';
+          localStorage.setItem('lightMode', 'false');
+        }
+      };
+
+      // Initial theme setup
+      updateTheme(enableLightMode);
+
+      darkModeToggle.addEventListener('click', () => {
+        const isLightMode = document.body.classList.contains('light-mode');
+        updateTheme(!isLightMode);
+      });
+    </script>
+  </body>
+</html>
