@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Menu • NEON SLICE</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+  <div class="background-image" aria-hidden="true"></div>
+
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark glassy">
+      <div class="container">
+        <a class="navbar-brand fw-bold neon-text" href="./index.html">NEON<span class="accent">SLICE</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"
+                aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon" aria-hidden="true"></span>
+        </button>
+
+        <div id="nav" class="collapse navbar-collapse">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="./index.html#hero">Home</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="./menu.html">Menu</a></li>
+            <li class="nav-item"><a class="nav-link" href="./order.html">Order</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="py-5">
+    <section class="container">
+      <header class="text-center mb-4">
+        <h1 class="neon-text">Our Pizzas</h1>
+        <p class="text-secondary-emphasis">A responsive multi-column grid—1/2/3 columns by screen size.</p>
+      </header>
+
+      <div class="row g-4">
+        <!-- Card 1 -->
+        <article class="col-12 col-sm-6 col-md-4">
+          <figure class="card glassy neon-border h-100 rounded-4 overflow-hidden">
+            <img src="./Images/pizza_margherita.jpg" class="card-img-top" alt="Margherita pizza with basil">
+            <figcaption class="card-body">
+              <h2 class="h5 card-title neon-text mb-1">Margherita</h2>
+              <p class="card-text text-secondary-emphasis">San Marzano, fior di latte, basil.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="fw-semibold">$12</span>
+                <a href="./order.html" class="btn btn-outline-neon btn-sm">Order</a>
+              </div>
+            </figcaption>
+          </figure>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="col-12 col-sm-6 col-md-4">
+          <figure class="card glassy neon-border h-100 rounded-4 overflow-hidden">
+            <img src="./Images/pizza_pepperoni.jpg" class="card-img-top" alt="Pepperoni pizza">
+            <figcaption class="card-body">
+              <h2 class="h5 card-title neon-text mb-1">Pepperoni</h2>
+              <p class="card-text text-secondary-emphasis">Cup-and-char pepperoni, double cheese.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="fw-semibold">$14</span>
+                <a href="./order.html" class="btn btn-outline-neon btn-sm">Order</a>
+              </div>
+            </figcaption>
+          </figure>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="col-12 col-sm-6 col-md-4">
+          <figure class="card glassy neon-border h-100 rounded-4 overflow-hidden">
+            <img src="./Images/pizza_veggie.jpg" class="card-img-top" alt="Veggie pizza with peppers and olives">
+            <figcaption class="card-body">
+              <h2 class="h5 card-title neon-text mb-1">Veggie Glow</h2>
+              <p class="card-text text-secondary-emphasis">Peppers, olives, onions, mushrooms.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="fw-semibold">$13</span>
+                <a href="./order.html" class="btn btn-outline-neon btn-sm">Order</a>
+              </div>
+            </figcaption>
+          </figure>
+        </article>
+
+        <!-- Add more pizzas as needed -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-4 mt-auto">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+      <p class="mb-2 mb-md-0 small text-secondary-emphasis">© <span id="year"></span> NEONSLICE</p>
+      <a class="nav-link small" href="./order.html">Order Now</a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JPuhN2rH5A7oN9b0E9N3z0Qx2Eo7y4j1sYQ4m7Z0b7k5QKZ5vRzW1lqkQnQf3kC9"
+          crossorigin="anonymous"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
