@@ -38,6 +38,18 @@ HTML5 • CSS3 • Bootstrap 5.3.8
 ## Diagram
 
 1. **built with draw.io**
+<<<<<<< HEAD
 2. > Images\neonSliceDiagram.png
 3.
 4.
+=======
+2.  > Images\neonSliceDiagram.png
+3. <img width="857" height="1398" alt="neonSliceDiagram" src="https://github.com/user-attachments/assets/c97549fc-073c-4141-9a76-6b54e5b4fba2" />
+
+4. <img width="858" height="1093" alt="neonOrder" src="https://github.com/user-attachments/assets/c1839e05-77e0-438b-b0d0-b166d31937bd" />
+5. <img width="858" height="1093" alt="neonMenu" src="https://github.com/user-attachments/assets/b87b37f7-2a40-4598-9897-22caf9588fd7" />
+
+
+
+
+>>>>>>> 0639599b7023dfd562cac6406b8cac46685b6fc5
