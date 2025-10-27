@@ -108,6 +108,7 @@ main {
   color: var(--accent-2);
   text-shadow: 0 0 12px rgba(0, 229, 255, 0.26), 0 0 24px rgba(0, 229, 255, 0.16);
 }
+
 .light-mode .neon-text {
   color: var(--accent);
   text-shadow: 0 0 8px rgba(255, 46, 166, 0.22);
@@ -131,6 +132,7 @@ main {
   --bs-btn-active-bg: #26e6ff;
   --bs-btn-active-border-color: #26e6ff;
 }
+
 .light-mode .btn-neon {
   --bs-btn-color: #ffffff;
   --bs-btn-bg: var(--accent);
@@ -150,6 +152,7 @@ main {
   --bs-btn-hover-border-color: var(--accent);
   --bs-btn-focus-shadow-rgb: 0, 229, 255;
 }
+
 .light-mode .btn-outline-neon {
   --bs-btn-color: var(--accent);
   --bs-btn-border-color: var(--accent);
@@ -163,6 +166,7 @@ main {
   border: 1px solid var(--glass-brd);
   box-shadow: inset 0 0 20px rgba(0, 229, 255, 0.08), 0 0 24px rgba(0, 229, 255, 0.08);
 }
+
 .light-mode .neon-border {
   border: 1px solid var(--glass-brd);
   box-shadow: inset 0 0 10px rgba(0, 123, 255, 0.05), 0 0 12px rgba(0, 123, 255, 0.05);
@@ -171,6 +175,7 @@ main {
 .object-fit-cover {
   object-fit: cover;
 }
+
 .text-secondary-emphasis {
   color: var(--muted) !important;
 }
@@ -196,6 +201,7 @@ main {
   color: var(--text);
   background-color: rgba(255, 255, 255, 0.06);
 }
+
 .light-mode .form-control:focus,
 .light-mode .form-select:focus {
   border-color: var(--focus);
@@ -207,6 +213,7 @@ main {
 .form-label {
   color: var(--accent-2);
 }
+
 .light-mode .form-label {
   color: var(--accent);
 }
@@ -217,6 +224,7 @@ main {
   color: var(--text) !important;
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
+
 .light-mode .form-select {
   background-color: rgba(0, 0, 0, 0.05) !important;
   color: var(--accent-2) !important;
@@ -229,6 +237,7 @@ main {
   border-color: var(--focus);
   box-shadow: 0 0 0 0.25rem rgba(112, 255, 191, 0.25);
 }
+
 .light-mode .form-select:focus {
   background-color: rgba(0, 0, 0, 0.08) !important;
   color: var(--accent-2) !important;
@@ -240,6 +249,7 @@ main {
   font-weight: 600 !important;
   color: #70ffbf;
 }
+
 .light-mode .fw-semibold {
   color: var(--accent);
 }
@@ -249,6 +259,7 @@ option {
   background-color: #19282a; /* dark background */
   color: var(--accent-2); /* readable text */
 }
+
 .light-mode option {
   background-color: #ffffff;
   color: #1f2328;
@@ -265,7 +276,9 @@ option {
 }
 .light-mode .navbar .nav-link {
   color: #7a2a5f;
-} /* muted pink */
+}
+
+/* muted pink */
 .light-mode .navbar .nav-link:hover,
 .light-mode .navbar .nav-link:focus,
 .light-mode .navbar .nav-link.active {
@@ -313,6 +326,7 @@ footer a:focus {
 .carousel-control-next-icon {
   filter: drop-shadow(0 0 6px rgba(0, 229, 255, 0.8));
 }
+
 .light-mode .carousel-control-prev-icon,
 .light-mode .carousel-control-next-icon {
   filter: drop-shadow(0 0 6px rgba(255, 46, 166, 0.5));
@@ -326,6 +340,7 @@ footer a:focus {
   color: #8ccbd8; /* dimmer, softer cyan tone */
   text-shadow: 0 0 3px rgba(0, 229, 255, 0.08);
 }
+
 .light-mode .card-text {
   color: #b72a7c; /* darker neon-pink text for light bg */
   text-shadow: none;
@@ -447,6 +462,7 @@ body.light-mode footer a {
   color: #ff4fbf;
   text-shadow: 0 0 8px rgba(255, 79, 191, 0.3);
 }
+
 body.light-mode footer a:hover {
   color: #ff8cd6;
 }
@@ -460,6 +476,7 @@ body.light-mode footer a:hover {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35), inset 0 0 20px rgba(0, 229, 255, 0.06);
   border: 1px solid var(--glass-brd);
 }
+
 body.light-mode .map-card {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.55));
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1), inset 0 0 14px rgba(255, 79, 191, 0.08);
