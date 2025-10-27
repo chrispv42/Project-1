@@ -301,7 +301,7 @@ footer a:focus {
   padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
   font-size: var(--bs-nav-link-font-size);
   font-weight: var(--bs-nav-link-font-weight);
-  color: var(--bs-nav-link-color, var(--accent-2));
+  color: var(--accent, var(--accent-2));
   text-decoration: none;
   background: 0 0;
   border: 0;
