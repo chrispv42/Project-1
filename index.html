@@ -27,11 +27,8 @@
     <header class="sticky-top">
       <nav class="navbar navbar-expand-lg navbar-dark glassy" aria-label="Primary">
         <div class="container">
-          <a
-            class="fruktur-regular"
-            class="navbar-brand fw-bold neon-text"
-            href="./index.html"
-          >NEON<span class="accent"> SLICE</span>
+          <a class="fruktur-regular" class="navbar-brand fw-bold neon-text" href="./index.html"
+            >NEON<span class="accent"> SLICE</span>
           </a>
           <button
             class="navbar-toggler"
@@ -209,7 +206,7 @@
           <header class="text-center mb-4">
             <h2 class="h1 neon-text">Contact Us</h2>
             <p class="text-secondary-emphasis">
-              Questions, catering, or custom pies? Ping the kitchen manager.
+              Questions, catering, or custom pies? Ping the kitchen.
             </p>
           </header>
 
@@ -249,6 +246,27 @@
               </div>
             </div>
           </form>
+        </div>
+      </section>
+      <!-- LOCATION -->
+      <section id="location" class="py-5">
+        <div class="container">
+          <h2 class="h2 neon-text text-center mb-3">Location</h2>
+
+          <!-- Centered glassmorphism card -->
+          <div class="map-card glassy neon-border rounded-4 p-2 mx-auto" style="max-width: 960px">
+            <div class="ratio ratio-16x9 rounded-3 overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d905971.238692927!2d-74.30912046675475!3d40.69719341004981!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY!5e1!3m2!1sen!2sus!4v1761600654245!5m2!1sen!2sus"
+                width="600"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
         </div>
       </section>
     </main>
@@ -300,11 +318,11 @@
       const updateTheme = (isLightMode) => {
         if (isLightMode) {
           document.body.classList.add('light-mode');
-          darkModeToggle.textContent = 'Dark Mode';
+          darkModeToggle.textContent = 'Neon Green';
           localStorage.setItem('lightMode', 'true');
         } else {
           document.body.classList.remove('light-mode');
-          darkModeToggle.textContent = 'Light Mode';
+          darkModeToggle.textContent = 'Neon Pink';
           localStorage.setItem('lightMode', 'false');
         }
       };
