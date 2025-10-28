@@ -4,13 +4,15 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>User Profile • NEON SLICE</title>
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="../CSS/style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -24,9 +26,10 @@
     <header class="sticky-top">
       <nav class="navbar navbar-expand-lg navbar-dark glassy">
         <div class="container">
-          <a class="fruktur-regular" class="navbar-brand fw-bold neon-text" href="../index.html"
-            >NEON<span class="accent"> SLICE</span></a
-          >
+          <a class="navbar-brand fw-bold neon-text fruktur-regular" href="../index.html">
+            NEON<span class="accent"> SLICE</span>
+          </a>
+
           <button
             class="navbar-toggler"
             type="button"
@@ -59,7 +62,7 @@
                 </a>
               </li>
               <li class="nav-item d-flex align-items-center ms-3">
-                <button id="darkModeToggle" class="theme-toggle-button">Light Mode</button>
+                <button class="theme-toggle-button">Light Mode</button>
               </li>
             </ul>
           </div>
@@ -100,40 +103,40 @@
                   <label for="userName" class="form-label">Full Name</label>
                   <input
                     type="text"
-                    class="form-control"
+                    class="form-control placeholder-bright"
                     id="userName"
-                    value="Your Name"
-                    readonly
+                    placeholder="Your Name"
+                    required
                   />
                 </div>
                 <div class="mb-3">
                   <label for="userEmail" class="form-label">Email address</label>
                   <input
                     type="email"
-                    class="form-control"
+                    class="form-control placeholder-bright"
                     id="userEmail"
-                    value="your.email@example.com"
-                    readonly
+                    placeholder="your.email@example.com"
+                    required
                   />
                 </div>
                 <div class="mb-3">
                   <label for="userPhone" class="form-label">Phone Number</label>
                   <input
                     type="tel"
-                    class="form-control"
+                    class="form-control placeholder-bright"
                     id="userPhone"
-                    value="555-123-4567"
-                    readonly
+                    placeholder="555-123-4567"
+                    required
                   />
                 </div>
                 <div class="mb-3">
                   <label for="userAddress" class="form-label">Address</label>
                   <input
                     type="text"
-                    class="form-control"
+                    class="form-control placeholder-bright"
                     id="userAddress"
-                    value="123 Neon Ave, Apt 4B"
-                    readonly
+                    placeholder="123 Neon Ave, Suite 4B"
+                    required
                   />
                 </div>
                 <button type="button" class="btn btn-neon">Edit Profile</button>
@@ -142,19 +145,23 @@
               <h2 class="neon-text mt-5 mb-3" id="orderHistory">Order History</h2>
               <p class="text-secondary-emphasis">No past orders found.</p>
 
-              <h2 class="neon-text mt-5 mb-3" id="paymentMethods" href="../payments.html">
-                Payment Methods
-              </h2>
+              <h2 class="neon-text mt-5 mb-3" id="paymentMethods">Payment Methods</h2>
               <p class="text-secondary-emphasis">No payment methods on file.</p>
 
               <h2 class="neon-text mt-5 mb-3" id="settings">Settings</h2>
-              <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" id="darkModeSwitch" checked />
-                <label class="form-check-label" for="darkModeSwitch">Dark Mode</label>
+
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <button class="theme-toggle-button">Neon Modes</button>
               </div>
+
               <div class="form-check form-switch mt-2">
                 <input class="form-check-input" type="checkbox" id="emailNotifications" />
                 <label class="form-check-label" for="emailNotifications">Email Notifications</label>
+              </div>
+
+              <div class="form-check form-switch mt-2">
+                <input class="form-check-input" type="checkbox" id="smsNotifications" />
+                <label class="form-check-label" for="smsNotifications">SMS Notifications</label>
               </div>
             </div>
           </article>
@@ -163,9 +170,7 @@
     </main>
 
     <footer class="py-4 mt-auto">
-      <div
-        class="container d-flex flex-column flex-md-row justify-content-between align-items-center"
-      >
+      <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
         <p class="mb-2 mb-md-0 small text-secondary-emphasis">
           <span id="year"></span> NEONSLICE | All rights reserved. | Vine Webs ©
         </p>
@@ -180,8 +185,7 @@
     ></script>
     <script>
       document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
-    <script>
+
       const cartItemCountElement = document.getElementById('cart-item-count');
       if (cartItemCountElement) {
         const itemCount = localStorage.getItem('cartItemCount');
@@ -193,26 +197,27 @@
         }
       }
 
-      const darkModeToggle = document.getElementById('darkModeToggle');
+      const toggleButtons = document.querySelectorAll('.theme-toggle-button');
+
+      function setToggleLabels(isLight) {
+        const label = isLight ? 'Neon Green' : 'Neon Pink';
+        toggleButtons.forEach(btn => (btn.textContent = label));
+      }
+
+      function updateTheme(isLightMode) {
+        document.body.classList.toggle('light-mode', isLightMode);
+        localStorage.setItem('lightMode', isLightMode ? 'true' : 'false');
+        setToggleLabels(isLightMode);
+      }
+
       const enableLightMode = localStorage.getItem('lightMode') === 'true';
-
-      const updateTheme = (isLightMode) => {
-        if (isLightMode) {
-          document.body.classList.add('light-mode');
-          darkModeToggle.textContent = 'Neon Green';
-          localStorage.setItem('lightMode', 'true');
-        } else {
-          document.body.classList.remove('light-mode');
-          darkModeToggle.textContent = 'Neon Pink';
-          localStorage.setItem('lightMode', 'false');
-        }
-      };
-
       updateTheme(enableLightMode);
 
-      darkModeToggle.addEventListener('click', () => {
-        const isLightMode = document.body.classList.contains('light-mode');
-        updateTheme(!isLightMode);
+      toggleButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const isLight = document.body.classList.contains('light-mode');
+          updateTheme(!isLight);
+        });
       });
     </script>
   </body>
