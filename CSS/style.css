@@ -197,19 +197,20 @@ option {
   color: var(--accent-2);
 }
 
+body.light-mode .fruktur-regular {
+  color: var(--focus);
+  text-shadow: 0 0 10px #ff00d440;
+}
+
 body.light-mode {
   background: linear-gradient(135deg, #ffe6f5, #fff0fa, #ffffff);
+  background-repeat: no-repeat;
 }
 
 body.light-mode .background-image {
   background: radial-gradient(1000px 600px at 80% 20%, #ff2ea62e, #00000000 60%),
     radial-gradient(800px 500px at 10% 80%, #ff74c829, #00000000 60%),
     repeating-linear-gradient(135deg, #ff2ea61f 0 2px, #00000000 2px 6px);
-}
-
-body.light-mode .fruktur-regular {
-  color: var(--focus);
-  text-shadow: 0 0 10px #ff00d440;
 }
 
 body.light-mode .neon-text {
