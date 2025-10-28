@@ -124,6 +124,7 @@ main {
   color: var(--accent-2);
   transition: color 0.15s ease-in-out;
 }
+
 .nav-link:hover,
 .nav-link:focus,
 .nav-link.active {
@@ -184,7 +185,7 @@ main {
 }
 
 .placeholder-bright::placeholder {
-  color: #a8f1ff;
+  color: rgba(168, 241, 255, 0.25);
   opacity: 1;
   text-shadow: 0 0 6px rgba(0, 229, 255, 0.35);
 }

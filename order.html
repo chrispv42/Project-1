@@ -46,7 +46,9 @@
             <ul class="navbar-nav ms-auto">
               <li class="nav-item"><a class="nav-link" href="../index.html#hero">Home</a></li>
               <li class="nav-item"><a class="nav-link" href="../menu.html">Menu</a></li>
-              <li class="nav-item"><a class="nav-link active" aria-current="page" href="../order.html">Order</a></li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../order.html">Order</a>
+              </li>
               <li class="nav-item">
                 <a class="nav-link" href="../cart.html">
                   Cart
@@ -77,23 +79,49 @@
           <p class="text-secondary-emphasis">Pickup or delivery—your call.</p>
         </header>
 
-        <form class="glassy p-4 rounded-4 neon-border mx-auto" style="max-width: 840px" action="#" method="POST">
+        <form
+          class="glassy p-4 rounded-4 neon-border mx-auto"
+          style="max-width: 840px"
+          action="../payments.html"
+          method="GET"
+        >
           <fieldset class="row g-3">
             <legend class="visually-hidden">Customer Info</legend>
 
             <div class="col-12 col-md-6">
               <label for="name" class="form-label">Full Name</label>
-              <input id="name" name="name" type="text" class="form-control placeholder-bright" placeholder="Full name" required />
+              <input
+                id="name"
+                name="name"
+                type="text"
+                class="form-control placeholder-bright"
+                placeholder="Full name"
+                required
+              />
             </div>
 
             <div class="col-12 col-md-6">
               <label for="email" class="form-label">Email</label>
-              <input id="email" name="email" type="email" class="form-control placeholder-bright" placeholder="you@neonslice.dev" required />
+              <input
+                id="email"
+                name="email"
+                type="email"
+                class="form-control placeholder-bright"
+                placeholder="you@neonslice.dev"
+                required
+              />
             </div>
 
             <div class="col-12 col-md-6">
               <label for="phone" class="form-label">Phone</label>
-              <input id="phone" name="phone" type="tel" class="form-control placeholder-bright" placeholder="555-123-4567" required />
+              <input
+                id="phone"
+                name="phone"
+                type="tel"
+                class="form-control placeholder-bright"
+                placeholder="555-123-4567"
+                required
+              />
             </div>
 
             <div class="col-12 col-md-6">
@@ -135,28 +163,52 @@
               <div class="row">
                 <div class="col-6 col-md-3">
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="topPep" name="toppings" value="pineapple" />
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="topPep"
+                      name="toppings"
+                      value="pineapple"
+                    />
                     <label class="form-check-label" for="topPep">Pineapple (+$1.50)</label>
                   </div>
                 </div>
 
                 <div class="col-6 col-md-3">
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="topMsh" name="toppings" value="sausage" />
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="topMsh"
+                      name="toppings"
+                      value="sausage"
+                    />
                     <label class="form-check-label" for="topMsh">Sausage (+$1.50)</label>
                   </div>
                 </div>
 
                 <div class="col-6 col-md-3">
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="topOn" name="toppings" value="extra-cheese" />
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="topOn"
+                      name="toppings"
+                      value="extra-cheese"
+                    />
                     <label class="form-check-label" for="topOn">Extra Cheese (+$1.50)</label>
                   </div>
                 </div>
 
                 <div class="col-6 col-md-3">
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="topOl" name="toppings" value="green-chili" />
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="topOl"
+                      name="toppings"
+                      value="green-chili"
+                    />
                     <label class="form-check-label" for="topOl">Green Chili (+$1.50)</label>
                   </div>
                 </div>
@@ -165,7 +217,13 @@
 
             <div class="col-12">
               <label for="notes" class="form-label">Notes</label>
-              <textarea id="notes" name="notes" class="form-control placeholder-bright" rows="4" placeholder="Extra crispy, light sauce, etc."></textarea>
+              <textarea
+                id="notes"
+                name="notes"
+                class="form-control placeholder-bright"
+                rows="4"
+                placeholder="Extra crispy, light sauce, etc."
+              ></textarea>
             </div>
           </fieldset>
 
@@ -174,22 +232,46 @@
 
             <div class="col-12">
               <label for="address" class="form-label">Address (if delivery)</label>
-              <input id="address" name="address" type="text" class="form-control placeholder-bright" placeholder="123 Neon Ave, Apt 4B" />
+              <input
+                id="address"
+                name="address"
+                type="text"
+                class="form-control placeholder-bright"
+                placeholder="123 Neon Ave, Suite 4B"
+              />
             </div>
 
             <div class="col-12 col-md-6">
               <label for="city" class="form-label">City</label>
-              <input id="city" name="city" type="text" class="form-control placeholder-bright" placeholder="City" />
+              <input
+                id="city"
+                name="city"
+                type="text"
+                class="form-control placeholder-bright"
+                placeholder="City"
+              />
             </div>
 
             <div class="col-6 col-md-3">
               <label for="state" class="form-label">State</label>
-              <input id="state" name="state" type="text" class="form-control placeholder-bright" placeholder="ST" />
+              <input
+                id="state"
+                name="state"
+                type="text"
+                class="form-control placeholder-bright"
+                placeholder="ST"
+              />
             </div>
 
             <div class="col-6 col-md-3">
               <label for="zip" class="form-label">ZIP</label>
-              <input id="zip" name="zip" type="text" class="form-control placeholder-bright" placeholder="12345" />
+              <input
+                id="zip"
+                name="zip"
+                type="text"
+                class="form-control placeholder-bright"
+                placeholder="12345"
+              />
             </div>
           </fieldset>
 
@@ -202,7 +284,9 @@
     </main>
 
     <footer class="py-4 mt-auto">
-      <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+      <div
+        class="container d-flex flex-column flex-md-row justify-content-between align-items-center"
+      >
         <p class="mb-2 mb-md-0 small text-secondary-emphasis">
           <span id="year"></span> NEONSLICE | All rights reserved. | Vine Webs ©
         </p>
@@ -253,4 +337,3 @@
     </script>
   </body>
 </html>
-

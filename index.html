@@ -121,11 +121,20 @@
                     </div>
                   </div>
                   <button
-                    class="carousel-control-prev" type="button" data-bs-target="#pizzaCarousel" data-bs-slide="prev" aria-label="Previous slide"
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#pizzaCarousel"
+                    data-bs-slide="prev"
+                    aria-label="Previous slide"
                   >
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                   </button>
-                  <button class="carousel-control-next" type="button" data-bs-target="#pizzaCarousel" data-bs-slide="next" aria-label="Next slide"
+                  <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#pizzaCarousel"
+                    data-bs-slide="next"
+                    aria-label="Next slide"
                   >
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                   </button>
@@ -193,26 +202,53 @@
           <form
             class="mx-auto glassy p-4 rounded-4 neon-border"
             style="max-width: 720px"
-            action="https://formspree.io/f/xblznjgd"
+            action="../greetings.html"
             method="GET"
             novalidate
           >
             <div class="row g-3">
               <div class="col-12 col-md-6">
                 <label for="firstName" class="form-label">First Name</label>
-                <input id="firstName" name="firstName" type="text" class="form-control" required />
+                <input
+                  id="firstName"
+                  name="firstName"
+                  type="text"
+                  class="form-control placeholder-bright"
+                  placeholder="First Name"
+                  required
+                />
               </div>
               <div class="col-12 col-md-6">
                 <label for="lastName" class="form-label">Last Name</label>
-                <input id="lastName" name="lastName" type="text" class="form-control" />
+                <input
+                  id="lastName"
+                  name="lastName"
+                  type="text"
+                  class="form-control placeholder-bright"
+                  placeholder="Last Name"
+                />
               </div>
               <div class="col-12">
                 <label for="email" class="form-label">Email</label>
-                <input id="email" name="email" type="email" class="form-control" required />
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  class="form-control placeholder-bright"
+                  placeholder="your.email@example.com"
+                  required
+                />
               </div>
               <div class="col-12">
                 <label for="message" class="form-label">Message</label>
-                <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
+                <textarea
+                  id="message"
+                  name="message"
+                  class="form-control placeholder-bright"
+                  rows="5"
+                  placeholder="Leave us with your thoughts here..."
+                  required
+                ></textarea>
               </div>
               <div class="col-12 d-flex gap-3">
                 <button type="submit" class="btn btn-neon">Send</button>
