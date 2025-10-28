@@ -265,7 +265,6 @@
       document.getElementById('year').textContent = new Date().getFullYear();
     </script>
     <script>
-      // Update cart item count on load
       const cartItemCountElement = document.getElementById('cart-item-count');
       if (cartItemCountElement) {
         const itemCount = localStorage.getItem('cartItemCount');
@@ -279,10 +278,8 @@
     </script>
     <script>
       (function () {
-        // ----- Config -----
         const TAX_RATE = 0.0775; // 7.75% (change to your local rate)
 
-        // ----- DOM refs -----
         const form = document.querySelector('form');
         const size = document.getElementById('size');
         const base = document.getElementById('base');
@@ -296,7 +293,6 @@
         const elTotal = document.getElementById('sum-total');
         const hiddenTotal = document.getElementById('calculatedTotal');
 
-        // ----- Helpers -----
         const money = (n) => `$${n.toFixed(2)}`;
 
         function readDataPrice(selectEl) {
@@ -305,32 +301,26 @@
         }
 
         function calc() {
-          // Size & Base
+
           const sizePrice = readDataPrice(size);
           const basePrice = readDataPrice(base);
           const sizeBase = sizePrice + basePrice;
 
-          // Toppings
           const toppingsPrice = toppingChecks
             .filter((ch) => ch.checked)
             .reduce((sum, ch) => sum + parseFloat(ch.dataset.price || 0), 0);
 
-          // Delivery fee
           const deliveryFee = (() => {
             const opt = method.options[method.selectedIndex];
             return opt ? parseFloat(opt.dataset.fee || 0) : 0;
           })();
 
-          // Subtotal
           const subtotal = sizeBase + toppingsPrice + deliveryFee;
 
-          // Tax (apply to food + delivery; adjust if your policy differs)
           const tax = subtotal * TAX_RATE;
 
-          // Total
           const total = subtotal + tax;
 
-          // Render
           elSizeBase.textContent = money(sizeBase);
           elToppings.textContent = money(toppingsPrice);
           elDelivery.textContent = money(deliveryFee);
@@ -340,23 +330,19 @@
           hiddenTotal.value = total.toFixed(2);
         }
 
-        // ----- Bind events -----
         [size, base, method, ...toppingChecks].forEach((el) => {
           el.addEventListener('change', calc);
           el.addEventListener('input', calc);
         });
 
-        // Initial calc on load
         calc();
 
-        // Optional: prevent submit if required priced fields empty
         form.addEventListener('submit', (e) => {
           if (!size.value || !base.value || !method.value) {
-            // Let browser validation handle it; this is just a safety check.
+
             return;
           }
 
-          // Capture order details and store in localStorage
           const orderDetails = {
             name: form.elements.name.value,
             email: form.elements.email.value,
@@ -383,12 +369,11 @@
           const itemCount = 1 + toppingChecks.filter((ch) => ch.checked).length; // 1 for the pizza itself + selected toppings
           localStorage.setItem('cartItemCount', itemCount.toString());
 
-          // Redirect to cart.html
         });
       })();
     </script>
     <script>
-      // Dark/Light Mode Toggle
+
       const darkModeToggle = document.getElementById('darkModeToggle');
       const enableLightMode = localStorage.getItem('lightMode') === 'true';
 
@@ -404,7 +389,6 @@
         }
       };
 
-      // Initial theme setup
       updateTheme(enableLightMode);
 
       darkModeToggle.addEventListener('click', () => {

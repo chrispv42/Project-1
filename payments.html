@@ -64,7 +64,6 @@
       <div class="glassy p-4 rounded-4 neon-border mx-auto" style="max-width: 820px">
         <h2 class="neon-text mb-3">Order Summary</h2>
         <div id="orderDetails">
-          <!-- Order details will be dynamically inserted here -->
           <p class="text-secondary-emphasis">No order details found. Please place an order first.</p>
         </div>
         <hr class="my-4" style="border-color: var(--glass-brd);">
@@ -87,7 +86,6 @@
           crossorigin="anonymous"></script>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
   <script>
-    // Update cart item count on load
     const cartItemCountElement = document.getElementById('cart-item-count');
     if (cartItemCountElement) {
       const itemCount = localStorage.getItem('cartItemCount');
@@ -100,19 +98,16 @@
     }
   </script>
   <script>
-    // JavaScript for generating order number and displaying order details
       document.addEventListener('DOMContentLoaded', () => {
         const orderNumberElement = document.getElementById('orderNumber');
         const orderDetailsElement = document.getElementById('orderDetails');
 
-        // Generate a unique order number
         const generateOrderNumber = () => {
           return 'NS-' + Math.random().toString(36).substr(2, 9).toUpperCase();
         };
 
         orderNumberElement.textContent = generateOrderNumber();
 
-        // Retrieve order details from localStorage
         const order = JSON.parse(localStorage.getItem('neonSliceOrder'));
 
         if (order) {
@@ -144,7 +139,6 @@
         }
       });
 
-      // Dark/Light Mode Toggle
       const darkModeToggle = document.getElementById('darkModeToggle');
       const enableLightMode = localStorage.getItem('lightMode') === 'true';
 
@@ -160,7 +154,6 @@
         }
       };
 
-      // Initial theme setup
       updateTheme(enableLightMode);
 
       darkModeToggle.addEventListener('click', () => {

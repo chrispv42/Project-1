@@ -78,7 +78,6 @@
         </header>
 
         <div class="row g-4">
-          <!-- Card 1 -->
           <article class="col-12 col-sm-6 col-md-4">
             <figure class="card glassy neon-border h-100 rounded-4 overflow-hidden">
               <img
@@ -99,7 +98,6 @@
             </figure>
           </article>
 
-          <!-- Card 2 -->
           <article class="col-12 col-sm-6 col-md-4">
             <figure class="card glassy neon-border h-100 rounded-4 overflow-hidden">
               <img src="./Images/greenReactor.png" class="card-img-top" alt="Pepperoni pizza" />
@@ -116,7 +114,6 @@
             </figure>
           </article>
 
-          <!-- Card 3 -->
           <article class="col-12 col-sm-6 col-md-4">
             <figure class="card glassy neon-border h-100 rounded-4 overflow-hidden">
               <img
@@ -127,7 +124,7 @@
               <figcaption class="card-body">
                 <h2 class="h5 card-title neon-text mb-1">Spicy Neon Inferno</h2>
                 <p class="card-text text-secondary-emphasis">
-                  — bacon, jalapeños, hot honey drizzle, red pepper flakes, and pepperoni.
+                  — bacon, jalapeños, hot honey drizzle, and pepperoni.
                 </p>
                 <div class="d-flex justify-content-between align-items-center">
                   <span class="fw-semibold">$13</span>
@@ -136,8 +133,6 @@
               </figcaption>
             </figure>
           </article>
-
-          <!-- Add more pizzas as needed -->
         </div>
       </section>
     </main>
@@ -162,7 +157,6 @@
       document.getElementById('year').textContent = new Date().getFullYear();
     </script>
     <script>
-      // Update cart item count on load
       const cartItemCountElement = document.getElementById('cart-item-count');
       if (cartItemCountElement) {
         const itemCount = localStorage.getItem('cartItemCount');
@@ -174,7 +168,6 @@
         }
       }
 
-      // Dark/Light Mode Toggle
       const darkModeToggle = document.getElementById('darkModeToggle');
       const enableLightMode = localStorage.getItem('lightMode') === 'true';
 
@@ -190,7 +183,6 @@
         }
       };
 
-      // Initial theme setup
       updateTheme(enableLightMode);
 
       darkModeToggle.addEventListener('click', () => {

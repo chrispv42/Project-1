@@ -188,8 +188,6 @@
     ></script>
     <script>
       document.getElementById('year').textContent = new Date().getFullYear();
-
-      // Update cart item count on load
       const cartItemCountElement = document.getElementById('cart-item-count');
       if (cartItemCountElement) {
         const itemCount = localStorage.getItem('cartItemCount');
@@ -201,7 +199,6 @@
         }
       }
 
-      // Dark/Light Mode Toggle
       const darkModeToggle = document.getElementById('darkModeToggle');
       const enableLightMode = localStorage.getItem('lightMode') === 'true';
 
@@ -217,7 +214,6 @@
         }
       };
 
-      // Initial theme setup
       updateTheme(enableLightMode);
 
       darkModeToggle.addEventListener('click', () => {
