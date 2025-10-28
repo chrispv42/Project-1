@@ -27,9 +27,11 @@ body.light-mode {
 * {
   box-sizing: border-box;
 }
+
 a {
   text-decoration: none;
 }
+
 html,
 body {
   height: 100%;
@@ -47,6 +49,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
 }
+
 main {
   flex: 1;
 }
@@ -72,12 +75,14 @@ main {
   text-shadow: 0 0 12px rgba(0, 229, 255, 0.26), 0 0 24px rgba(0, 229, 255, 0.16);
 }
 .accent {
-  color: var(--accent);
+  colo
+  r: var(--accent);
 }
 .fw-semibold {
   font-weight: 600 !important;
   color: var(--focus);
 }
+
 .text-secondary-emphasis {
   color: var(--muted) !important;
 }
@@ -154,25 +159,10 @@ main {
   transition: all 0.3s ease;
   box-shadow: 0 0 6px rgba(0, 229, 255, 0.35);
 }
+
 .theme-toggle-button:hover {
   opacity: 0.9;
   box-shadow: 0 0 12px rgba(0, 229, 255, 0.6);
-}
-
-footer {
-  border-top: 1px solid var(--glass-brd);
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.35));
-  text-align: center;
-}
-footer a {
-  color: var(--accent);
-  text-shadow: 0 0 6px rgba(0, 229, 255, 0.5);
-  transition: color 0.3s ease, text-shadow 0.3s ease;
-}
-footer a:hover,
-footer a:focus {
-  color: var(--accent-2);
-  text-shadow: 0 0 10px rgba(0, 229, 255, 0.7);
 }
 
 .form-label {
@@ -185,12 +175,20 @@ footer a:focus {
   border: 1px solid rgba(255, 255, 255, 0.18);
   color: var(--text);
 }
+
 .form-control:focus,
 .form-select:focus {
   border-color: var(--focus);
   box-shadow: 0 0 0 0.25rem rgba(112, 255, 191, 0.25);
   background-color: rgba(255, 255, 255, 0.06);
 }
+
+.placeholder-bright::placeholder {
+  color: #a8f1ff;
+  opacity: 1;
+  text-shadow: 0 0 6px rgba(0, 229, 255, 0.35);
+}
+
 option {
   background-color: #19282a;
   color: var(--accent-2);
@@ -262,16 +260,24 @@ body.light-mode .form-select {
   color: #1f2328;
   box-shadow: 0 2px 10px rgba(255, 79, 191, 0.1);
 }
+
+body.light-mode .placeholder-bright::placeholder {
+  color: #ff74c8;
+  text-shadow: 0 0 6px rgba(255, 116, 200, 0.35);
+}
+
 body.light-mode .form-control:hover,
 body.light-mode .form-select:hover {
   border-color: rgba(255, 116, 200, 0.55);
 }
+
 body.light-mode .form-control:focus,
 body.light-mode .form-select:focus {
   background-color: rgba(255, 255, 255, 0.9);
   border-color: #ff4fbf;
   box-shadow: 0 0 0 0.25rem rgba(255, 139, 214, 0.3);
 }
+
 body.light-mode option {
   background-color: #fff;
   color: #1f2328;
@@ -282,6 +288,7 @@ body.light-mode .theme-toggle-button {
   color: #fff;
   box-shadow: 0 0 8px rgba(0, 123, 255, 0.4);
 }
+
 body.light-mode .theme-toggle-button:hover {
   box-shadow: 0 0 12px rgba(0, 123, 255, 0.6);
 }
@@ -291,10 +298,12 @@ body.light-mode footer {
   border-top: 1px solid rgba(255, 79, 191, 0.25);
   color: #ff4fbf;
 }
+
 body.light-mode footer a {
   color: #ff4fbf;
   text-shadow: 0 0 8px rgba(255, 79, 191, 0.3);
 }
+
 body.light-mode footer a:hover {
   color: #ff8cd6;
 }
@@ -313,4 +322,22 @@ body.light-mode .carousel-control-next-icon {
     animation: none !important;
     transition: none !important;
   }
+}
+
+footer {
+  border-top: 1px solid var(--glass-brd);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.35));
+  text-align: center;
+}
+
+footer a {
+  color: var(--accent);
+  text-shadow: 0 0 6px rgba(0, 229, 255, 0.5);
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+footer a:hover,
+footer a:focus {
+  color: var(--accent-2);
+  text-shadow: 0 0 10px rgba(0, 229, 255, 0.7);
 }
