@@ -8,7 +8,7 @@ A multi-page pizza website with a neon/glassmorphism aesthetic using **HTML**, *
 
 ## Live Demo
 
-(Add your GitHub Pages URL)
+(Pending)
 
 ## Features
 
