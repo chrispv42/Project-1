@@ -170,7 +170,9 @@
     </main>
 
     <footer class="py-4 mt-auto">
-      <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+      <div
+        class="container d-flex flex-column flex-md-row justify-content-between align-items-center"
+      >
         <p class="mb-2 mb-md-0 small text-secondary-emphasis">
           <span id="year"></span> NEONSLICE | All rights reserved. | Vine Webs ©
         </p>
@@ -201,7 +203,7 @@
 
       function setToggleLabels(isLight) {
         const label = isLight ? 'Neon Green' : 'Neon Pink';
-        toggleButtons.forEach(btn => (btn.textContent = label));
+        toggleButtons.forEach((btn) => (btn.textContent = label));
       }
 
       function updateTheme(isLightMode) {
@@ -213,7 +215,7 @@
       const enableLightMode = localStorage.getItem('lightMode') === 'true';
       updateTheme(enableLightMode);
 
-      toggleButtons.forEach(btn => {
+      toggleButtons.forEach((btn) => {
         btn.addEventListener('click', () => {
           const isLight = document.body.classList.contains('light-mode');
           updateTheme(!isLight);
