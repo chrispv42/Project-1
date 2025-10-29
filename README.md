@@ -34,6 +34,8 @@ HTML5 • CSS3 • Bootstrap 5.3.8
 
 ## Snapshots
 
+## Snapshots
+
 <p align="center">
   <img src="./Images/homePage.png" alt="Home Page" width="800"/>
   <img src="./Images/menu.png" alt="Menu" width="800"/>
