@@ -145,9 +145,8 @@ main {
   border-radius: 1rem !important;
 }
 
-.card-text {
-  color: #8ccbd8;
-  text-shadow: 0 0 3px #00e5ff14;
+#cart-item-count {
+  background-color: #00e5ff59 !important;
 }
 
 .navbar-avatar {
@@ -156,6 +155,11 @@ main {
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid var(--accent);
+}
+
+.card-text {
+  color: #8ccbd8;
+  text-shadow: 0 0 3px #00e5ff14;
 }
 
 .theme-toggle-button {

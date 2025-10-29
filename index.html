@@ -23,8 +23,8 @@
     <header class="sticky-top">
       <nav class="navbar navbar-expand-lg navbar-dark glassy" aria-label="Primary">
         <div class="container">
-          <a class="fruktur-regular navbar-brand fw-bold neon-text" href="../index.html"
-            >NEON<span class="accent"> SLICE</span>
+          <a class="fruktur-regular navbar-brand fw-bold neon-text" href="../index.html">
+            NEON<span class="accent"> SLICE</span>
           </a>
           <button
             class="navbar-toggler"
@@ -65,6 +65,7 @@
         </div>
       </nav>
     </header>
+
     <main id="content">
       <section id="hero" class="py-5">
         <div class="container">
@@ -262,7 +263,6 @@
       <section id="location" class="py-5">
         <div class="container">
           <h2 class="h2 neon-text text-center mb-3">Location</h2>
-
           <div class="map-card glassy neon-border rounded-4 p-2 mx-auto" style="max-width: 960px">
             <div class="ratio ratio-16x9 rounded-3 overflow-hidden">
               <iframe
@@ -270,7 +270,7 @@
                 width="600"
                 height="450"
                 style="border: 0"
-                allowfullscreen=""
+                allowfullscreen
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
               ></iframe>
@@ -281,9 +281,7 @@
     </main>
 
     <footer class="py-4 mt-auto">
-      <div
-        class="container d-flex flex-column flex-md-row justify-content-between align-items-center"
-      >
+      <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
         <p class="mb-2 mb-md-0 small text-secondary-emphasis">
           <span id="year"></span>
           NEONSLICE | All rights reserved. | Vine Webs ©
@@ -303,40 +301,6 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
-    <script>
-      document.getElementById('year').textContent = new Date().getFullYear();
-      const cartItemCountElement = document.getElementById('cart-item-count');
-      if (cartItemCountElement) {
-        const itemCount = localStorage.getItem('cartItemCount');
-        if (itemCount && parseInt(itemCount) > 0) {
-          cartItemCountElement.textContent = itemCount;
-          cartItemCountElement.style.display = 'inline-block';
-        } else {
-          cartItemCountElement.style.display = 'none';
-        }
-      }
-
-      const darkModeToggle = document.getElementById('darkModeToggle');
-      const enableLightMode = localStorage.getItem('lightMode') === 'true';
-
-      const updateTheme = (isLightMode) => {
-        if (isLightMode) {
-          document.body.classList.add('light-mode');
-          darkModeToggle.textContent = 'Neon Green';
-          localStorage.setItem('lightMode', 'true');
-        } else {
-          document.body.classList.remove('light-mode');
-          darkModeToggle.textContent = 'Neon Pink';
-          localStorage.setItem('lightMode', 'false');
-        }
-      };
-
-      updateTheme(enableLightMode);
-
-      darkModeToggle.addEventListener('click', () => {
-        const isLightMode = document.body.classList.contains('light-mode');
-        updateTheme(!isLightMode);
-      });
-    </script>
+    <script src="../JS/main.js"></script>
   </body>
 </html>

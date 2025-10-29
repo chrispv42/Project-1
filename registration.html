@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Profile • NEON SLICE</title>
+    <title>Join • NEON SLICE</title>
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -11,6 +12,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="../CSS/style.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,6 +20,7 @@
       rel="stylesheet"
     />
   </head>
+
   <body>
     <div class="background-image" aria-hidden="true"></div>
 
@@ -25,9 +28,9 @@
       <nav class="navbar navbar-expand-lg navbar-dark glassy">
         <div class="container">
           <a class="fruktur-regular navbar-brand fw-bold neon-text" href="../index.html">
-            NEON
-            <span class="accent">SLICE</span>
+            NEON <span class="accent">SLICE</span>
           </a>
+
           <button
             class="navbar-toggler"
             type="button"
@@ -47,16 +50,13 @@
               <li class="nav-item"><a class="nav-link" href="../order.html">Order</a></li>
               <li class="nav-item">
                 <a class="nav-link" href="../cart.html">
-                  Cart
-                  <span id="cart-item-count" class="badge rounded-pill bg-danger">0</span>
+                  Cart <span id="cart-item-count" class="badge rounded-pill bg-danger">0</span>
                 </a>
               </li>
               <li class="nav-item"><a class="nav-link" href="../index.html#about">About</a></li>
               <li class="nav-item"><a class="nav-link" href="../index.html#contact">Contact</a></li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="../registration.html">
-                  Join Us
-                </a>
+                <a class="nav-link active" aria-current="page" href="../registration.html">Join Us</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="../profile.html">
@@ -73,13 +73,14 @@
     </header>
 
     <main class="py-5">
-      <section class="container" aria-labelledby="profileTitle">
+      <section class="container" aria-labelledby="joinTitle">
         <header class="text-center mb-4">
-          <h1 id="profileTitle" class="neon-text">Join the Neon Crew!</h1>
+          <h1 id="joinTitle" class="neon-text">Join the Neon Crew!</h1>
           <p class="text-secondary-emphasis">
-            Create your profile to save your favorite orders and get exclusive deals.
+            Create your profile to save favorites and unlock exclusive deals.
           </p>
         </header>
+
         <section class="container my-4" aria-label="NeonSlice Theme">
           <div class="mx-auto" style="max-width: 540px">
             <div class="glassy neon-border rounded-4 p-3">
@@ -98,6 +99,7 @@
         </section>
 
         <form
+          id="registrationForm"
           class="mx-auto"
           style="max-width: 720px"
           action="../greetingsRegistration.html"
@@ -171,12 +173,9 @@
     </main>
 
     <footer class="py-4 mt-auto">
-      <div
-        class="container d-flex flex-column flex-md-row justify-content-between align-items-center"
-      >
+      <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
         <p class="mb-2 mb-md-0 small text-secondary-emphasis">
-          <span id="year"></span>
-          NEONSLICE | All rights reserved. | Vine Webs ©
+          <span id="year"></span> NEONSLICE | All rights reserved. | Vine Webs ©
         </p>
         <a class="nav-link small" href="../index.html#contact">Contact</a>
       </div>
@@ -187,40 +186,6 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
-    <script>
-      document.getElementById('year').textContent = new Date().getFullYear();
-      const cartItemCountElement = document.getElementById('cart-item-count');
-      if (cartItemCountElement) {
-        const itemCount = localStorage.getItem('cartItemCount');
-        if (itemCount && parseInt(itemCount) > 0) {
-          cartItemCountElement.textContent = itemCount;
-          cartItemCountElement.style.display = 'inline-block';
-        } else {
-          cartItemCountElement.style.display = 'none';
-        }
-      }
-
-      const darkModeToggle = document.getElementById('darkModeToggle');
-      const enableLightMode = localStorage.getItem('lightMode') === 'true';
-
-      const updateTheme = (isLightMode) => {
-        if (isLightMode) {
-          document.body.classList.add('light-mode');
-          darkModeToggle.textContent = 'Neon Green';
-          localStorage.setItem('lightMode', 'true');
-        } else {
-          document.body.classList.remove('light-mode');
-          darkModeToggle.textContent = 'Neon Pink';
-          localStorage.setItem('lightMode', 'false');
-        }
-      };
-
-      updateTheme(enableLightMode);
-
-      darkModeToggle.addEventListener('click', () => {
-        const isLightMode = document.body.classList.contains('light-mode');
-        updateTheme(!isLightMode);
-      });
-    </script>
+    <script src="../JS/main.js"></script>
   </body>
 </html>

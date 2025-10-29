@@ -24,9 +24,9 @@
     <header class="sticky-top">
       <nav class="navbar navbar-expand-lg navbar-dark glassy">
         <div class="container">
-          <a class="fruktur-regular navbar-brand fw-bold neon-text" href="../index.html"
-            >NEON<span class="accent"> SLICE</span></a
-          >
+          <a class="fruktur-regular navbar-brand fw-bold neon-text" href="../index.html">
+            NEON <span class="accent">SLICE</span>
+          </a>
           <button
             class="navbar-toggler"
             type="button"
@@ -42,9 +42,7 @@
           <div id="nav" class="collapse navbar-collapse">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item"><a class="nav-link" href="../index.html#hero">Home</a></li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="../menu.html">Menu</a>
-              </li>
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="../menu.html">Menu</a></li>
               <li class="nav-item"><a class="nav-link" href="../order.html">Order</a></li>
               <li class="nav-item">
                 <a class="nav-link" href="../cart.html">
@@ -72,9 +70,7 @@
       <section class="container">
         <header class="text-center mb-4">
           <h1 class="neon-text">Our Pizzas</h1>
-          <p class="text-secondary-emphasis">
-            A responsive multi-column grid—1/2/3 columns by screen size.
-          </p>
+          <p class="text-secondary-emphasis">A responsive multi-column grid—1/2/3 columns by screen size.</p>
         </header>
 
         <div class="row g-4">
@@ -87,9 +83,7 @@
               />
               <figcaption class="card-body">
                 <h2 class="h5 card-title neon-text mb-1">Space Droppings</h2>
-                <p class="card-text text-secondary-emphasis">
-                  — san marzano, mushrooms, fior di latte, basil and red onion.
-                </p>
+                <p class="card-text text-secondary-emphasis">— san marzano, mushrooms, fior di latte, basil and red onion.</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <span class="fw-semibold">$12</span>
                   <a href="../order.html" class="btn btn-outline-neon btn-sm">Order</a>
@@ -103,9 +97,7 @@
               <img src="../Images/greenReactor.png" class="card-img-top" alt="Pepperoni pizza" />
               <figcaption class="card-body">
                 <h2 class="h5 card-title neon-text mb-1">Green Reactor</h2>
-                <p class="card-text text-secondary-emphasis">
-                  — pesto base, spinach, artichokes, ricotta, and roasted garlic.
-                </p>
+                <p class="card-text text-secondary-emphasis">— pesto base, spinach, artichokes, ricotta, and roasted garlic.</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <span class="fw-semibold">$14</span>
                   <a href="../order.html" class="btn btn-outline-neon btn-sm">Order</a>
@@ -123,9 +115,7 @@
               />
               <figcaption class="card-body">
                 <h2 class="h5 card-title neon-text mb-1">Spicy Neon Inferno</h2>
-                <p class="card-text text-secondary-emphasis">
-                  — bacon, jalapeños, hot honey drizzle, and pepperoni.
-                </p>
+                <p class="card-text text-secondary-emphasis">— bacon, jalapeños, hot honey drizzle, and pepperoni.</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <span class="fw-semibold">$13</span>
                   <a href="../order.html" class="btn btn-outline-neon btn-sm">Order</a>
@@ -138,9 +128,7 @@
     </main>
 
     <footer class="py-4 mt-auto">
-      <div
-        class="container d-flex flex-column flex-md-row justify-content-between align-items-center"
-      >
+      <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
         <p class="mb-2 mb-md-0 small text-secondary-emphasis">
           <span id="year"></span> NEONSLICE | All rights reserved. | Vine Webs ©
         </p>
@@ -153,42 +141,6 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
-    <script>
-      document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
-    <script>
-      const cartItemCountElement = document.getElementById('cart-item-count');
-      if (cartItemCountElement) {
-        const itemCount = localStorage.getItem('cartItemCount');
-        if (itemCount && parseInt(itemCount) > 0) {
-          cartItemCountElement.textContent = itemCount;
-          cartItemCountElement.style.display = 'inline-block';
-        } else {
-          cartItemCountElement.style.display = 'none';
-        }
-      }
-
-      const darkModeToggle = document.getElementById('darkModeToggle');
-      const enableLightMode = localStorage.getItem('lightMode') === 'true';
-
-      const updateTheme = (isLightMode) => {
-        if (isLightMode) {
-          document.body.classList.add('light-mode');
-          darkModeToggle.textContent = 'Neon Green';
-          localStorage.setItem('lightMode', 'true');
-        } else {
-          document.body.classList.remove('light-mode');
-          darkModeToggle.textContent = 'Neon Pink';
-          localStorage.setItem('lightMode', 'false');
-        }
-      };
-
-      updateTheme(enableLightMode);
-
-      darkModeToggle.addEventListener('click', () => {
-        const isLightMode = document.body.classList.contains('light-mode');
-        updateTheme(!isLightMode);
-      });
-    </script>
+    <script src="../JS/main.js"></script>
   </body>
 </html>
