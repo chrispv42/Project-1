@@ -34,14 +34,14 @@ HTML5 • CSS3 • Bootstrap 5.3.8
 
 ## Snapshots
 
-<img width="800" height="1100" alt="homePage" ahref="../Project-1/Images/homePage.png" />
-<img width="800" height="1100" alt="homePage2" ahref="../Project-1/Images/home2.png" />
-<img width="800" height="1100" alt="homePage3" ahref="../Project-1/Images/home3.png" />
-<img width="800" height="1100" alt="menu" ahref="../Project-1/Images/menu.png" />
-<img width="800" height="1100" alt="order" ahref="../Project-1/Images/order.png" />
-<img width="800" height="1100" alt="cart" ahref="../Project-1/Images/cart.png" />
-<img width="800" height="1100" alt="joinUS" ahref="../Project-1/Images/joinUs.png" />
-<img width="800" height="1100" alt="neonPink" ahref="../Project-1/Images/neonPink.png" />
+1. <img width="800" height="1100" alt="homePage" ahref="../Project-1/Images/homePage.png" />
+2. <img width="800" height="1100" alt="homePage2" ahref="../Project-1/Images/home2.png" />
+3. <img width="800" height="1100" alt="homePage3" ahref="../Project-1/Images/home3.png" />
+4. <img width="800" height="1100" alt="menu" ahref="../Project-1/Images/menu.png" />
+5. <img width="800" height="1100" alt="order" ahref="../Project-1/Images/order.png" />
+6. <img width="800" height="1100" alt="cart" ahref="../Project-1/Images/cart.png" />
+7. <img width="800" height="1100" alt="joinUS" ahref="../Project-1/Images/joinUs.png" />
+8. <img width="800" height="1100" alt="neonPink" ahref="../Project-1/Images/neonPink.png" />
 
 ## User Story
 
