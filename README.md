@@ -34,14 +34,14 @@ HTML5 • CSS3 • Bootstrap 5.3.8
 
 ## Snapshots
 
-<img width="800" height="1100" alt="homePage" ahref="../Project-1/Images/homePage.png" />
-<img width="800" height="1100" alt="homePage2" ahref="../Project-1/Images/home2.png" />
-<img width="800" height="1100" alt="homePage3" ahref="../Project-1/Images/home3.png" />
-<img width="800" height="1100" alt="menu" ahref="../Project-1/Images/menu.png" />
-<img width="800" height="1100" alt="order" ahref="../Project-1/Images/order.png" />
-<img width="800" height="1100" alt="cart" ahref="../Project-1/Images/cart.png" />
-<img width="800" height="1100" alt="joinUS" ahref="../Project-1/Images/joinUs.png" />
-<img width="800" height="1100" alt="neonPink" ahref="../Project-1/Images/neonPink.png" />
+<p align="center">
+  <img src="./Images/homePage.png" alt="Home Page" width="800"/>
+  <img src="./Images/menu.png" alt="Menu" width="800"/>
+  <img src="./Images/order.png" alt="Order" width="800"/>
+  <img src="./Images/cart.png" alt="Cart" width="800"/>
+  <img src="./Images/joinUs.png" alt="Join Us" width="800"/>
+  <img src="./Images/neonPink.png" alt="Neon Pink" width="800"/>
+</p>
 
 ## User Story
 
