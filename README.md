@@ -34,14 +34,12 @@ HTML5 • CSS3 • Bootstrap 5.3.8
 
 ## Snapshots
 
-1. <img width="800" height="1100" alt="homePage" ahref="../Project-1/Images/homePage.png" />
-2. <img width="800" height="1100" alt="homePage2" ahref="../Project-1/Images/home2.png" />
-3. <img width="800" height="1100" alt="homePage3" ahref="../Project-1/Images/home3.png" />
-4. <img width="800" height="1100" alt="menu" ahref="../Project-1/Images/menu.png" />
-5. <img width="800" height="1100" alt="order" ahref="../Project-1/Images/order.png" />
-6. <img width="800" height="1100" alt="cart" ahref="../Project-1/Images/cart.png" />
-7. <img width="800" height="1100" alt="joinUS" ahref="../Project-1/Images/joinUs.png" />
-8. <img width="800" height="1100" alt="neonPink" ahref="../Project-1/Images/neonPink.png" />
+1. <img src="../Images/homePage.png" alt="Home Page" width="350">
+2. <img src="../Images/menu.png" alt="Menu" width="350">
+3. <img src="../Images/order.png" alt="Order" width="350">
+4. <img src="../Images/cart.png" alt="Cart" width="350">
+5. <img src="../Images/joinUs.png" alt="Join Us" width="350">
+6. <img src="../Images/neonPink.png" alt="Neon Pink" width="350">
 
 ## User Story
 
