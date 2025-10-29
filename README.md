@@ -1,6 +1,7 @@
 # NEON SLICE — Cyberpunk Pizzeria
 
-**Author:** Chris Vine
+\*_Author: Chris Vine_
+https://www.linkedin.com/in/christopher-vine/
 
 ## Overview
 
@@ -8,22 +9,11 @@ A multi-page pizza website with a neon/glassmorphism aesthetic using **HTML**, *
 
 ## Live Demo
 
-(Pending)
+https://project-1-vt4r.onrender.com
 
 ## Features
 
-- Semantic HTML5 structure (header, nav, main, section, article, footer)
 - Responsive 12-column Bootstrap grid
-- Menu page with multi-column card layout
-- Carousel (fade/auto) on home page
-- Order form (≥3 fields; ≥2 required) with Formspree hook
-
-## Usage
-
-- Replace images under `/Images`.
-- Update Formspree endpoint in forms: `https://formspree.io/f/your-form-id`.
-- my user-form-id for this project: `https://formspree.io/f/xblznjgd`
-- Open `index.html` to preview.
 
 ## Technologies
 
@@ -35,21 +25,27 @@ HTML5 • CSS3 • Bootstrap 5.3.8
 2. Add a location map + hours modal.
 3. Add theme toggle with persisted preference.
 
-## Diagram
+## WireFrame
 
 1. **built with draw.io**
-<<<<<<< HEAD
-2. > Images\neonSliceDiagram.png
-3.
-4.
-=======
-2.  > Images\neonSliceDiagram.png
-3. <img width="857" height="1398" alt="neonSliceDiagram" src="https://github.com/user-attachments/assets/c97549fc-073c-4141-9a76-6b54e5b4fba2" />
+2. <img width="800" height="1100" alt="neonSliceDiagram" src="https://github.com/user-attachments/assets/c97549fc-073c-4141-9a76-6b54e5b4fba2" />
 
-4. <img width="858" height="1093" alt="neonOrder" src="https://github.com/user-attachments/assets/c1839e05-77e0-438b-b0d0-b166d31937bd" />
-5. <img width="858" height="1093" alt="neonMenu" src="https://github.com/user-attachments/assets/b87b37f7-2a40-4598-9897-22caf9588fd7" />
+3. <img width="800" height="1100" alt="neonOrder" src="https://github.com/user-attachments/assets/c1839e05-77e0-438b-b0d0-b166d31937bd" />
+4. <img width="800" height="1100" alt="neonMenu" src="https://github.com/user-attachments/assets/b87b37f7-2a40-4598-9897-22caf9588fd7" />
 
+## Snapshots
 
+<img width="800" height="1100" alt="neonOrder" src="../Project-1/Images/homePage.png" />
+<img width="800" height="1100" alt="neonOrder" src="../Project-1/Images/home2.png" />
+<img width="800" height="1100" alt="neonOrder" src="../Project-1/Images/home3.png" />
+<img width="800" height="1100" alt="neonOrder" src="../Project-1/Images/menu.png" />
+<img width="800" height="1100" alt="neonOrder" src="../Project-1/Images/order.png" />
+<img width="800" height="1100" alt="neonOrder" src="../Project-1/Images/cart.png" />
+<img width="800" height="1100" alt="neonOrder" src="../Project-1/Images/joinUs.png" />
+<img width="800" height="1100" alt="neonOrder" src="../Project-1/Images/neonPink.png" />
 
+## User Story
 
->>>>>>> 0639599b7023dfd562cac6406b8cac46685b6fc5
+**As a hungry customer,*
+**I want to browse a vibrant cyberpunk-themed pizzeria menu, customize my order, and complete a secure checkout,*
+**so that I can enjoy a fast, futuristic, and visually immersive ordering experience that saves my preferences for next time.*
