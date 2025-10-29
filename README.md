@@ -37,15 +37,12 @@ HTML5 • CSS3 • Bootstrap 5.3.8
 ## Snapshots
 
 <p align="center">
-  <img src="./Images/homePage.png" alt="Home Page" width="350"/>
-  <img src="./Images/menu.png" alt="Menu" width="350"/>
-  <img src="./Images/order.png" alt="Order" width="350"/>
-</p>
-
-<p align="center">
-  <img src="./Images/cart.png" alt="Cart" width="350"/>
-  <img src="./Images/joinUs.png" alt="Join Us" width="350"/>
-  <img src="./Images/neonPink.png" alt="Neon Pink" width="350"/>
+  <img src="./Images/homePage.png" alt="Home Page" width="800"/>
+  <img src="./Images/menu.png" alt="Menu" width="800"/>
+  <img src="./Images/order.png" alt="Order" width="800"/>
+  <img src="./Images/cart.png" alt="Cart" width="800"/>
+  <img src="./Images/joinUs.png" alt="Join Us" width="800"/>
+  <img src="./Images/neonPink.png" alt="Neon Pink" width="800"/>
 </p>
 
 ## User Story
