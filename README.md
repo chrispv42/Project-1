@@ -21,7 +21,7 @@ HTML5 • CSS3 • Bootstrap 5.3.8
 
 ## Future Improvements
 
-1. Add functional profile upon join us completion. Login/sign up location rather. 
+1. Add functional profile upon join us completion. Login/sign up location rather.
 2. Add open operation hours for the establishment
 
 ## WireFrame
@@ -45,6 +45,6 @@ HTML5 • CSS3 • Bootstrap 5.3.8
 
 ## User Story
 
-**As a hungry customer,*
-**I want to browse a vibrant cyberpunk-themed pizzeria menu, customize my order, and complete a secure checkout,*
-**so that I can enjoy a fast, futuristic, and visually immersive ordering experience that saves my preferences for next time.*
+**As a hungry customer,\*
+**I want to browse a vibrant cyberpunk-themed pizzeria menu, customize my order, and complete a secure checkout,_
+\*\*so that I can enjoy a fast, futuristic, and visually immersive ordering experience that saves my preferences for next time._
